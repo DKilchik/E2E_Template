@@ -1,5 +1,8 @@
 package core.utilities.db;
 
+import core.utilities.configuration.Configuration;
+
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,14 +12,13 @@ import java.util.Map;
 public class DatabaseQuery {
 
     private Connection connection;
-    // TODO implement reading url value from config
-    private String url = "jdbc:sqlite:/home/dmitry/InStatProjects/E2E_Template/samples/sample";
+    private String url = Configuration.getDatabaseURI();
     private Statement stmt;
     private ResultSet rs;
     private List<Map<String, ?>> result = new ArrayList<Map<String, ?>>();
 
 
-    public DatabaseQuery(String query) {
+    public DatabaseQuery(String query) throws IOException {
         this.connection = null;
         try {
             // get DB connection
