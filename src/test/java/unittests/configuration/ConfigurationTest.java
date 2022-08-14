@@ -1,6 +1,7 @@
-package core.utilities.configuration;
+package unittests.configuration;
 
 import org.testng.annotations.Test;
+import utilities.configuration.Configuration;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package core.utilities.cfgreader;
+package utilities.cfgreader;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,6 +1,6 @@
-package core.utilities.db;
+package utilities.db;
 
-import core.utilities.configuration.Configuration;
+import utilities.configuration.Configuration;
 
 import java.io.IOException;
 import java.sql.*;

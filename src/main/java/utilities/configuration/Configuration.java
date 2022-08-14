@@ -1,7 +1,7 @@
-package core.utilities.configuration;
+package utilities.configuration;
 
 
-import core.utilities.cfgreader.ConfigReader;
+import utilities.cfgreader.ConfigReader;
 
 import java.io.IOException;
 

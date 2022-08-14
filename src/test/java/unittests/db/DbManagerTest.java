@@ -1,4 +1,6 @@
-package core.utilities.db;
+package unittests.db;
+
+import utilities.db.DbManager;
 
 import java.io.IOException;
 import java.util.List;

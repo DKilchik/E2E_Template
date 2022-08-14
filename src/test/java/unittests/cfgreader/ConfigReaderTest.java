@@ -1,6 +1,7 @@
-package core.utilities.cfgreader;
+package unittests.cfgreader;
 
 import org.testng.annotations.Test;
+import utilities.cfgreader.ConfigReader;
 
 import java.io.IOException;
 
