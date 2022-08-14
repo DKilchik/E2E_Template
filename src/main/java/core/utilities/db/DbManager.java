@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DatabaseQuery {
+public class DbManager {
 
     private Connection connection;
     private String url = Configuration.getDatabaseURI();
@@ -18,8 +18,12 @@ public class DatabaseQuery {
     private List<Map<String, ?>> result = new ArrayList<Map<String, ?>>();
 
 
-    public DatabaseQuery(String query) throws IOException {
+    public DbManager() throws IOException {
         this.connection = null;
+
+    }
+
+    public List getQuery(String query) {
         try {
             // get DB connection
             connection = DriverManager.getConnection(url);
@@ -63,11 +67,6 @@ public class DatabaseQuery {
 
             }
         }
-
-    }
-
-
-    public List getResult() {
         return result;
     }
 

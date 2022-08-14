@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.util.List;
 
 
-public class DatabaseQueryTest {
+public class DbManagerTest {
 
     @org.testng.annotations.Test
     public void testGetResult() throws IOException {
-        List result = new DatabaseQuery("Select * FROM test").getResult();
+        List result = new DbManager().getQuery("Select * FROM test");
         assert(!result.isEmpty());
     }
 }
