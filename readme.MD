@@ -1,0 +1,1 @@
+Template project of Selenium based testing and utilities
