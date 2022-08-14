@@ -14,6 +14,8 @@ public class BaseTest {
 
     @BeforeTest
     public void setupDriver(){
+
+        System.out.println("Driver Started");
         this.driver = DriverManagerFactory.getDriver(DriverType.CHROME).webDriver();
     }
 

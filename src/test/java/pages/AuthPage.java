@@ -14,11 +14,18 @@ public class AuthPage extends BasePage {
 
     public AuthPage(WebDriver driver) {
         super(driver);
+        url = "https://opensource-demo.orangehrmlive.com/index.php/auth/login";
+    }
+
+    @Override
+    public AuthPage open() {
+        this.driver.get(this.url);
+        return this;
     }
 
     @Override
     public AuthPage waitIsLoaded() {
-        new DriverWait(this.driver).elementIsPresent(usernameFld);
+        new DriverWait(this.driver).elementIsPresent(usernameFld,10);
         return this;
     }
 
