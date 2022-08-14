@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import core.webdriver.wrappers.DriverWait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,11 +18,7 @@ public class AuthPage extends BasePage {
 
     @Override
     public AuthPage waitIsLoaded() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        new DriverWait(this.driver).elementIsPresent(usernameFld);
         return this;
     }
 
