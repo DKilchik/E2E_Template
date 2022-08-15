@@ -5,21 +5,14 @@ import org.openqa.selenium.WebDriver;
 public abstract class DriverManager {
 
     protected WebDriver driver;
-    protected abstract void initDriver();
+    protected abstract void startDriver();
 
 
     public WebDriver getDriver(){
-        if (driver != null){
-            initDriver();
+        if (driver == null){
+            startDriver();
         }
         return driver;
-    }
-
-    public void closeDriver(){
-        // Close current window. Web driver session  continue
-        if (driver != null){
-            driver.close();
-        }
     }
 
     public void quitDriver(){

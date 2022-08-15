@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class FirefoxDriverManager extends DriverManager{
 
     @Override
-    protected void initDriver() {
+    protected void startDriver() {
         driver = new FirefoxDriver();
     }
 }
