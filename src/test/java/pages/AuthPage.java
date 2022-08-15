@@ -10,22 +10,23 @@ public class AuthPage extends BasePage {
 
     private final By usernameFld = By.id("txtUsername");
     private final By passwordFld = By.id("txtPassword");
-    private final By loginBtn = By.id("Submit");
+    private final By loginBtn = By.id("btnLogin");
+
 
     public AuthPage(WebDriver driver) {
         super(driver);
-        url = "https://opensource-demo.orangehrmlive.com/index.php/auth/login";
-    }
-
-    @Override
-    public AuthPage open() {
-        this.driver.get(this.url);
-        return this;
+        this.url = "https://opensource-demo.orangehrmlive.com/";
     }
 
     @Override
     public AuthPage waitIsLoaded() {
-        new DriverWait(this.driver).elementIsPresent(usernameFld,10);
+        new DriverWait(this.driver).elementIsPresent(usernameFld);
+        return this;
+    }
+
+    @Override
+    public AuthPage open() {
+        driver.get(this.url);
         return this;
     }
 

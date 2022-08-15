@@ -8,7 +8,7 @@ public abstract class DriverManager {
     protected abstract void initDriver();
 
 
-    public WebDriver webDriver(){
+    public WebDriver getDriver(){
         if (driver != null){
             initDriver();
         }

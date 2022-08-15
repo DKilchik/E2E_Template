@@ -5,7 +5,7 @@ import core.constants.DriverType;
 
 public class DriverManagerFactory {
 
-    public static DriverManager getDriver(DriverType driverType){
+    public static DriverManager getManager(DriverType driverType){
         switch (driverType){
             case CHROME : {
                 return new ChromeDriverManager();
