@@ -9,7 +9,7 @@ import java.time.Duration;
 public class Configuration {
 
     public static String projectPath = System.getProperty("user.dir");
-    public static Duration defaultTimeout = Duration.ofSeconds(10);
+    public static Duration defaultTimeout = Duration.ofSeconds(20);
 
     public static String getDatabaseURI() throws IOException {
         String databaseURI = new ConfigReader().getPropValue("DB");

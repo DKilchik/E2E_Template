@@ -10,12 +10,15 @@ public class TestAuthPage extends BaseTest {
 
     @Test
     public void testLogin(){
-        new AuthPage(this.driver).
+        new AuthPage(driver).
+                open().
                 waitIsLoaded().
                 enterUsername("Admin").
                 enterPassword("admin123").
                 clickLoginButton();
 
-        assertTrue(this.driver.getCurrentUrl().contains("dashboard"));
+        assertTrue(driver.getCurrentUrl().contains("dashboard"));
     }
+
+
 }
